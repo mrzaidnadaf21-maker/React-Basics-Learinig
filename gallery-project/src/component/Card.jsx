@@ -2,7 +2,7 @@ const Card = (props, idx) => {
   return (
     <div>
       <a href={props.elem.url} target="_blank">
-        <div className="h-40 w-44 overflow-hidden bg-white rounded-xl">
+        <div className="h-50 w-44 overflow-hidden bg-white rounded-xl">
           <img
             className="h-full object-cover w-full"
             src={props.elem.download_url}

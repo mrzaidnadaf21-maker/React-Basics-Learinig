@@ -6,11 +6,11 @@ import Button from "./component/Button";
 const App = () => {
   const [userData, setUserData] = useState([]);
 
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(28);
 
   const getdata = async () => {
     const response = await axios.get(
-      `https://picsum.photos/v2/list?page=${index}&limit=16`
+      `https://picsum.photos/v2/list?page=${index}&limit=12`
     );
     setUserData(response.data);
     // console.log(response.data);
@@ -40,7 +40,7 @@ const App = () => {
   }
 
   return (
-    <div className="bg-black h-screen p-5 overflow-auto text-white">
+    <div className="bg-black h-screen p-4  overflow-auto text-white">
       <div className=" h-[70%] flex flex-wrap gap-4 p-2">{printUserData}</div>
 
       <Button index={index} setIndex={setIndex} setUserData={setUserData} />
